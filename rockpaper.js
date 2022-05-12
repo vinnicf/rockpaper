@@ -14,6 +14,20 @@ let loss = 0;
 const playerSelection = "rock";
   
 
+input.addEventListener('change', () => {
+    const jogada = input.value.toLowerCase();
+
+    if (jogada == 'rock' || jogada == 'paper' || jogada == 'scissors') {
+      console.log ('Greta. You played well');
+      return jogada;
+    } else {
+        console.log ('Please, play a proper play');
+    }
+  });
+
+
+
+
 function computerplay() {
 
     let playseed = 0
@@ -29,6 +43,7 @@ function computerplay() {
 
 return play;
 };
+
 
 const computerSelection = computerplay();
 

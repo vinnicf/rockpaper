@@ -9,7 +9,7 @@
       margin: 10px 1px 0;
     }
   </style>
-<script src="js-file.js" defer></script>
+<script src="rockpaper.js" defer></script>
 
 </head>
 <body>
@@ -27,39 +27,5 @@
     </div>
   </div>
 
-
-  <script>
-    const input = document.querySelector('.numberInput');
-    const para = document.querySelector('p');
-    function aoquadrado (num) {
-      return num*num;
-    }
-    function aocubo (num) {
-      return num*num*num;
-    }
-    function factorial(num) {
-      if (num < 0) return undefined;
-      if (num == 0) return 1;
-      let x = num - 1;
-      while (x > 1) {
-        num *= x;
-        x--;
-      }
-      return num;
-    }
-
-    input.addEventListener('change', () => {
-  const num = parseFloat(input.value);
-  if (isNaN(num)) {
-    para.textContent = 'You need to enter a number!';
-  } else {
-    para.textContent = `${num} squared is ${aoquadrado(num)}. `;
-    para.textContent += `${num} cubed is ${aocubo(num)}. `;
-    para.textContent += `${num} factorial is ${factorial(num)}. `;
-  }
-});
-
-
-  </script>
 </body>
 </html>
